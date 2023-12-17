@@ -25,6 +25,10 @@ RUN echo "samk13 ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
 # Switch to samk13 user
 USER samk13
 
+WORKDIR /home/samk13
+
+COPY ./dev /home/samk13/dev
+
 # Run using: 
 # docker build -t toolbox:latest -f Dockerfile .
 # docker run -it toolbox:latest /bin/bash
